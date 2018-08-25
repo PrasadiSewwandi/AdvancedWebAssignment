@@ -20,7 +20,7 @@ class CreateStudentsTable extends Migration
             $table->date('Date_of_Birth');
             $table->string('NIC');
             $table->string('address');
-            $table->string('contact no.');
+            $table->string('contact_no');
             $table->string('email');
             $table->year('registered_year');
             $table->string('faculty');
