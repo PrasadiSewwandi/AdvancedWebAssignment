@@ -10,3 +10,5 @@
 |SE/2014/049 |MS. S.N.A. WIJENAYAKA|
 |SE/2014/050 |MS. H.D.P.S. JAYAKODI|
 
+
+This is a LMS system for students and lectures
