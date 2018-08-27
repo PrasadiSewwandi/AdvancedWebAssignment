@@ -21,24 +21,36 @@
             <tr>
                 
                 <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Gender</th>
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>Contact No</th>
+                <th>Email</th>
+                <th>Job Title</th>
+                <th>Specialization</th>
+                <th>Faculty</th>
+                <th>Department</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                  
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
-            </tr>
-            
+            @if(count($lecturers) > 0)
+                @foreach($lecturers as $lec)
+                    <tr>   
+                        <td>{{$lec->name}}</td>
+                        <td>{{$lec->gender}}</td>
+                        <td>{{$lec->Date_of_Birth}}</td>
+                        <td>{{$lec->address}}</td>
+                        <td>{{$lec->contact_no}}</td>
+                        <td>{{$lec->email}}</td>
+                        <td>{{$lec->job_title}}</td>
+                        <td>{{$lec->specialization}}</td>
+                        <td>{{$lec->faculty}}</td>
+                        <td>{{$lec->department}}</td>
+                    </tr>
+                @endforeach
+            @else
+                <p>No Lecturers found</p>
+            @endif
         </tbody>
         
     </table>

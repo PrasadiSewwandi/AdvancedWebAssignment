@@ -8,7 +8,8 @@ use App\Lecturer;
 class LecturersController extends Controller
 {
     public function index() {
+
         $lecturers = Lecturer::all();
-        return view('lecturers');
+        return view('lecturers')->with('lecturers', $lecturers);
     }
 }
