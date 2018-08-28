@@ -26,7 +26,7 @@ class CreateLecturersTable extends Migration
             $table->string('specialization');
             $table->string('faculty');
             $table->string('department');
-            $table->timestamps();
+           
         });
     }
 
