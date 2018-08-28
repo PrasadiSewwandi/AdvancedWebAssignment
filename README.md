@@ -17,4 +17,4 @@ There are three user rolls
 * Students
 * Lecturers
 
-Users have to login to the system by giving their user name and pasword and they can sarch for details of a particular lecturer or a student.
+Users have to login to the system by giving their user name and pasword.Then students and lecturers can search for the details of a particular student or a lecturer. 
