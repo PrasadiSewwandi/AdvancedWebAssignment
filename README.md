@@ -12,3 +12,4 @@
 
 
 This is a LMS system for students and lectures
+Users have to login to the system by giving their user name and pasword and they can sarch for details of a particular lecturer or a student.
