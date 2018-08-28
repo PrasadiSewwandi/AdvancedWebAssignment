@@ -18,3 +18,15 @@ There are three user rolls
 * Lecturers
 
 Users have to login to the system by giving their user name and pasword.Then students and lecturers can search for the details of a particular student or a lecturer. 
+#### Work Lord Matrix
+| Task | Done by |Description|
+| ------------- | ------------- |------------- |
+|Login and registration |P.L. WILLIAMS| |
+|Social Media Login |S.N.A. WIJENAYAKA| |
+|User roles|  V.A. PUNCHIHEWA(Students,Lecturers)  ,R.M.I.M. RATHNAYAKE(Admin) | |
+|Role manage middleware|  T. SHARMILAN (Students,Lecturers), R.M.I.M. RATHNAYAKE(Admin)     | |
+|CRUD|  E. VIPISANAN  | |
+|DB tables using migration| V.A. PUNCHIHEWA| |
+|Report  module| S.N.A. WIJENAYAKA , H.D.P.S. JAYAKODI | |
+|Readme| H.D.P.S. JAYAKODI | |
+|Workload matrix| V.A. PUNCHIHEWA| |
