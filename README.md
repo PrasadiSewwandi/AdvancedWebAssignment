@@ -28,5 +28,5 @@ Users have to login to the system by giving their user name and pasword.Then stu
 |CRUD|  E. VIPISANAN  | |
 |DB tables using migration| V.A. PUNCHIHEWA| |
 |Report  module| S.N.A. WIJENAYAKA , H.D.P.S. JAYAKODI | |
-|Readme| H.D.P.S. JAYAKODI | |
+|Readme and merge| H.D.P.S. JAYAKODI | |
 |Workload matrix| V.A. PUNCHIHEWA| |
