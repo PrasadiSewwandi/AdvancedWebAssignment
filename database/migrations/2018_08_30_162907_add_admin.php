@@ -15,6 +15,7 @@ class AddAdmin extends Migration
     {
         Schema::table('users', function($table){
             $table->string('is_admin')->after('name')->default(0);
+            $table->string('user_type')->after('is_admin')->default(0);
         });
     }
 
@@ -27,6 +28,7 @@ class AddAdmin extends Migration
     {
         Schema::table('users', function($table){
             $table->dropColumn('is_admin');
+            $table->dropColumn('user_type');
         });
     }
 }

@@ -34,8 +34,8 @@
                         
 						<tbody>
                         @foreach ($users as $user)
+                            @if($user->user_type=='lecturer')
 							<tr>
-                                {{ csrf_field() }}
 								<td>{{ $user->id }}</td>
 								<td>{{ $user->name }}</td>
 								<td>{{ $user->email }}</td>
@@ -59,6 +59,7 @@
                                     @endif
                                 </td>  
 							</tr>
+                            @endif
                         @endforeach
 						</tbody>
 
@@ -82,18 +83,25 @@
 						<thead>
 							<tr>
 								<th>#</th>
-								<th>Task</th>
-								<th>Assignee</th>
-								<th>Status</th>
+								<th>Name</th>
+								<th>Email</th>
 							</tr>
 						</thead>
 						<tbody>
+                        @foreach ($users as $user)
+                            @if($user->user_type=='student')
 							<tr>
-								<td>1</td>
-								<td>Site Wireframes</td>
-								<td>John Smith</td>
-								<td>in progress</td>
+                                <td>{{ $user->id }}</td>
+								<td>{{ $user->name }}</td>
+								<td>{{ $user->email }}</td>
+								<td>
+                                    @if($user->is_admin==0)
+                                        <a class="btn btn-danger" style="display:inline" href="{{ url('/admin/user/destroy/'.$user->id) }}">Delete</a>
+                                    @endif
+                                </td>
 							</tr>
+                            @endif
+                        @endforeach
 						</tbody>
 					</table>
 				</div>
