@@ -21,3 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/lecturer', 'LecturersController@index');
 Route::get('/student', 'StudentsController@index');
+
+Route::group(['middleware' => ['auth', 'admin']], function() {
+    Route::get('/admin', function () {
+        return view('admin');
+    });    
+});
