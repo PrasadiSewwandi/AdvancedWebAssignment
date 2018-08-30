@@ -20,7 +20,7 @@
 						</div>
 					</div>
 					<div class="panel-body">
-						<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+						<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Lecturer" />
 					</div>
 					<table class="table table-hover" id="dev-table">
 						<thead>
@@ -29,21 +29,23 @@
 								<th>Name</th>
 								<th>Email</th>
 								<th>Is Admin</th>
-                                <th>Delete</th>
 							</tr>
 						</thead>
                         
 						<tbody>
                         @foreach ($users as $user)
 							<tr>
+                                {{ csrf_field() }}
 								<td>{{ $user->id }}</td>
 								<td>{{ $user->name }}</td>
 								<td>{{ $user->email }}</td>
                                 <td>
                                     @if($user->is_admin==1)
-                                        <a class="btn btn-info" >Yes</a>
+                                        <input style="width:50px" class="form-control input-sm" id="inputsm" name="isAdmin" type="text" value="YES">
+                                        <!-- <a class="btn btn-info" >Yes</a> -->
                                     @else
-                                        <a class="btn btn-info" >No</a>
+                                        <input style="width:50px" class="form-control input-sm" id="inputsm" name="isAdmin" type="text" value="NO">
+                                        <!-- <a class="btn btn-info" >No</a> -->
                                     @endif
 								</td>
                                 <td>
@@ -51,9 +53,11 @@
                                         <a class="btn btn-danger" style="display:inline" href="{{ url('/admin/user/destroy/'.$user->id) }}">Delete</a>
                                     @endif
                                 </td>
-                                
-
-                                <!-- <td>{{ $user->id }}</td> -->
+                                <td>
+                                    @if($user->is_admin==0)
+                                        <a class="btn btn-success" style="display:inline">Save</a>
+                                    @endif
+                                </td>  
 							</tr>
                         @endforeach
 						</tbody>
@@ -89,42 +93,6 @@
 								<td>Site Wireframes</td>
 								<td>John Smith</td>
 								<td>in progress</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>Mobile Landing Page</td>
-								<td>Kilgore Trout</td>
-								<td>completed</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>Add SEO tags</td>
-								<td>Bob Loblaw</td>
-								<td>failed qa</td>
-							</tr>
-							<tr>
-								<td>4</td>
-								<td>Migrate to Bootstrap 3</td>
-								<td>Emily Hoenikker</td>
-								<td>in progress</td>
-							</tr>
-							<tr>
-								<td>5</td>
-								<td>Update jQuery library</td>
-								<td>Holden Caulfield</td>
-								<td>deployed</td>
-							</tr>
-							<tr>
-								<td>6</td>
-								<td>Issues in IE7</td>
-								<td>Jane Doe</td>
-								<td>failed qa</td>
-							</tr>
-							<tr>
-								<td>7</td>
-								<td>Bugs from Sprint 14</td>
-								<td>Kilgore Trout</td>
-								<td>completed</td>
 							</tr>
 						</tbody>
 					</table>
