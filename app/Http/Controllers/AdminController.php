@@ -13,13 +13,19 @@ class AdminController extends Controller
         $this->middleware('admin');
         $this->user = $user;
     }
+
     public function index(){
         return view('admin');
     }
+
     public function user(){
-        //$id= Auth::user()->id;
         $users = $this->user->all();
-        // //return view("project.ideas")->with(["data"=>$project]);
+         return view('admin')->with(["users"=>$users]);
+    }
+
+    public function destroy($id){    
+        $users = $this->user->where('id',$id)->delete();
+        $users = $this->user->all();
          return view('admin')->with(["users"=>$users]);
     }
 }

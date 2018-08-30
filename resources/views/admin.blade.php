@@ -46,7 +46,14 @@
                                         <a class="btn btn-info" >No</a>
                                     @endif
 								</td>
-                                <td>{{ $user->id }}</td>
+                                <td>
+                                    @if($user->is_admin==0)
+                                        <a class="btn btn-danger" style="display:inline" href="{{ url('/admin/user/destroy/'.$user->id) }}">Delete</a>
+                                    @endif
+                                </td>
+                                
+
+                                <!-- <td>{{ $user->id }}</td> -->
 							</tr>
                         @endforeach
 						</tbody>
