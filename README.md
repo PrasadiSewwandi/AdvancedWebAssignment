@@ -23,6 +23,14 @@ Users have to login to the system by giving their user name and pasword.Then stu
 * http://127.0.0.1:8000/login This is the login page
 * http://127.0.0.1:8000/lecturer Users can see lecturers details from this page. And also they can search for a particular lecturer by this page.
 * http://127.0.0.1:8000/student  Users can see students details from this page. And also they can search for a particular student by this page. 
+*  http://127.0.0.1:8000/admin/user This is the page for admin users 
+##### Technologies Used
+* HTML
+* JS
+* CSS
+* PHP
+* framework Laravel
+* Bootstrap
 #### Work Lord Matrix
 | Task | Done by |
 | ------------- | ------------- |
