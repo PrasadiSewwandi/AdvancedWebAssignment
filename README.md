@@ -18,6 +18,9 @@ There are three user rolls
 * Lecturers
 
 Users have to login to the system by giving their user name and pasword.Then students and lecturers can search for the details of a particular student or a lecturer. Admins can search for the details and edit them as well.
+* http://127.0.0.1:8000 this is the Home Page
+* http://127.0.0.1:8000/register using this page users can register 
+* http://127.0.0.1:8000/login This is the login page
 #### Work Lord Matrix
 | Task | Done by |
 | ------------- | ------------- |
