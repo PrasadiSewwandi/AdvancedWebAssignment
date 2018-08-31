@@ -18,11 +18,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
 // OAuth Routes: edited by Savindi
 Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 Route::get('/lecturer', 'LecturersController@index');
 Route::get('/student', 'StudentsController@index');
+Route::group(['middleware'=>['auth','admin']], function()
+{
+	Route::get('/admin', function () {
+    return view('admin');
+});
+
+});
 
