@@ -27,7 +27,7 @@ class CreateStudentsTable extends Migration
             $table->string('department');
             $table->string('degree');
             $table->float('GPA', 3, 2);
-            $table->timestamps();
+           
         });
     }
 
