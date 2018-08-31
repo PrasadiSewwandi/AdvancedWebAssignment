@@ -31,3 +31,12 @@ Route::group(['middleware'=>['auth','admin']], function()
 
 });
 
+// Route::group(['middleware' => ['auth', 'admin']], function() {
+//     Route::get('/admin', function () {
+//         return view('admin');
+//     });    
+// });
+Route::get('/admin','AdminController@index')->name('admin');
+Route::get('/admin/user','AdminController@user')->name('admin');
+Route::get('/admin/user/destroy/{id}','AdminController@destroy')->name('admin');
+Route::get('/admin/user/updateAdmin/{id}/{role}','AdminController@updateAdmin')->name('admin');

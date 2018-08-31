@@ -18,6 +18,7 @@ class Admin
     public function handle($request, Closure $next)
     {
         if (Auth::check() && Auth::user()->isAdmin()) {
+<<<<<<< HEAD
 			return $next($request);
 
         }
@@ -25,5 +26,11 @@ class Admin
 		    return redirect('/home');
 
 
+=======
+            return $next($request);
+        }
+
+        return redirect('/home');
+>>>>>>> fee2db1f8d82c5090212e7647fa103a9d5ae2e08
     }
 }
