@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 // OAuth Routes: edited by Savindi
 Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+
+
