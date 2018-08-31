@@ -41,10 +41,10 @@
 								<td>{{ $user->email }}</td>
                                 <td>
                                     @if($user->is_admin==1)
-                                        <input style="width:50px" class="form-control input-sm" id="inputsm" name="isAdmin" type="text" value="YES">
+                                        <input readonly style="width:50px" class="form-control input-sm" id="inputsm" name="isAdmin" type="text" value="YES">
                                         <!-- <a class="btn btn-info" >Yes</a> -->
                                     @else
-                                        <input style="width:50px" class="form-control input-sm" id="inputsm" name="isAdmin" type="text" value="NO">
+                                        <input readonly style="width:50px" class="form-control input-sm" id="inputsm" name="isAdmin" type="text" value="NO">
                                         <!-- <a class="btn btn-info" >No</a> -->
                                     @endif
 								</td>
@@ -55,7 +55,7 @@
                                 </td>
                                 <td>
                                     @if($user->is_admin==0)
-                                        <a class="btn btn-success" style="display:inline">Save</a>
+                                        <a class="btn btn-success" style="display:inline"  href="{{ url('/admin/user/updateAdmin/'.$user->id.'/'.'yes') }}">Make as adimin</a>
                                     @endif
                                 </td>  
 							</tr>

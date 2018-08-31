@@ -11,6 +11,7 @@ class AdminController extends Controller
     public function __construct(User $user)
     {
         $this->middleware('admin');
+       
         $this->user = $user;
     }
 
@@ -27,5 +28,17 @@ class AdminController extends Controller
         $users = $this->user->where('id',$id)->delete();
         $users = $this->user->all();
          return view('admin')->with(["users"=>$users]);
+    }
+
+    public function updateAdmin($id,$role){    
+        $user = $this->user->where('id',$id)->first();
+        if($role=='yes'){
+            $user->is_admin=1;
+        }else{
+            $user->is_admin=0;
+        }
+        $user->save();
+        $user = $this->user->all();
+         return view('admin')->with(["users"=>$user]);
     }
 }
