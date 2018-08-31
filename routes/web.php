@@ -18,9 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-// OAuth Routes: edited by Savindi
-Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+
+
 Route::get('/lecturer', 'LecturersController@index');
 Route::get('/student', 'StudentsController@index');
 Route::group(['middleware'=>['auth','admin']], function()
@@ -40,4 +39,11 @@ Route::get('/admin','AdminController@index')->name('admin');
 Route::get('/admin/user','AdminController@user')->name('admin');
 Route::get('/admin/user/destroy/{id}','AdminController@destroy')->name('admin');
 Route::get('/admin/user/updateAdmin/{id}/{role}','AdminController@updateAdmin')->name('admin');
+
+// OAuth Routes: edited by Savindi
+Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+
+Route::get('admin/report/student', 'ReportController@studentReport');
+Route::get('admin/report/lecturer', 'ReportController@lecturerReport');
 
