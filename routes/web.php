@@ -40,3 +40,4 @@ Route::get('/admin','AdminController@index')->name('admin');
 Route::get('/admin/user','AdminController@user')->name('admin');
 Route::get('/admin/user/destroy/{id}','AdminController@destroy')->name('admin');
 Route::get('/admin/user/updateAdmin/{id}/{role}','AdminController@updateAdmin')->name('admin');
+
